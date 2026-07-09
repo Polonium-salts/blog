@@ -1,3 +1,3 @@
-var posts=["2026/07/08/hello-world/","2026/07/08/cloudflare cdn优选/"];function toRandomPost(){
+var posts=["2026/07/08/cloudflare cdn优选/"];function toRandomPost(){
     pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);
   };
