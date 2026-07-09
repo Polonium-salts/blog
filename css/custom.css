@@ -366,7 +366,10 @@ body[data-type="categories"] {
       flex-wrap: nowrap !important;
       will-change: transform;
       backface-visibility: hidden;
-      transform: translateZ(0);
+    }
+
+    /* CSS 动画作为 JS 未加载时的降级方案 */
+    #skills-tags-group-all .tags-group-wrapper[data-scroll-css] {
       animation: home-rowup 60s linear infinite !important;
     }
 
@@ -384,21 +387,31 @@ body[data-type="categories"] {
     }
 
     #skills-tags-group-all .tags-group-icon {
-      width: 72px;
-      height: 72px;
-      border-radius: 20px;
+      width: 72px !important;
+      height: 72px !important;
+      border-radius: 20px !important;
       display: flex !important;
       justify-content: center;
       align-items: center;
       box-shadow: 0 2px 12px -2px rgba(0, 0, 0, .18);
       overflow: hidden;
       background: #fff;
+      font-size: 0 !important;
+      color: transparent !important;
     }
 
     #skills-tags-group-all .tags-group-icon img {
-      width: 40px;
-      height: 40px;
+      width: 40px !important;
+      height: 40px !important;
       object-fit: contain;
+      margin: 0 !important;
+    }
+
+    /* 覆盖主题默认的偶数子图标偏移 */
+    #skills-tags-group-all .tags-group-icon-pair .tags-group-icon:nth-child(even),
+    #skills-tags-group-all .tags-group-icon-pair .tags-group-icon:nth-child(2n) {
+      margin-top: 0 !important;
+      transform: none !important;
     }
   }
 
