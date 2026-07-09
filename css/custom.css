@@ -1,0 +1,13 @@
+/* 全屏固定底层背景 */
+#web_bg {
+  background-image: url('/img/bg.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  transform: none !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
